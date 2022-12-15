@@ -1,0 +1,61 @@
+{% macro render(args) %}
+    {% import "components/Cards/pricings.njk" as PricingCard %}
+    <div class="pricing-section-05">
+        <div class="pricing-section-05__shape-1" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+            <img src="./image/home-9/section-shape-1.svg" alt="shape" class="w-100">
+        </div>
+        <div class="pricing-section-05__shape-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+            <img src="./image/home-9/price-shape.svg" alt="shape" class="w-100">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="section-title pricing-section-05__title">
+                        <h6 class="subtitle text-bule mb-20">Pricing & Plans </h6>
+                        <h2 class="title">We offer simple pricing <br class="d-none d-xs-block"> plan for you</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center pricing-section-05__price-card three-row-mobile-slider mobile-slider">
+                <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-11" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    {{PricingCard.Four({
+          colorClass:"text-green",
+          plan:"Starter Plan",
+          price:"$0",
+          listOne:"10 GB Disk Space",
+          listTwo:"1 Year Support",
+          listThree:"500 Queries",
+          listFour:"Basic Statistics",
+          listFive:"Free Custom Domain"
+        })}}
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-11" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                    {{PricingCard.Four({
+                        wrappperClass:"active",
+            colorClass:"text-red",
+            plan:"Premium Plan",
+            price:"$100",
+            listOne:"500 GB Disk Space",
+            listTwo:"5 Year Support",
+            listThree:"1000 Queries",
+            listFour:"Basic Statistics",
+            listFive:"Free Custom Domain",
+            listSix:"Unlimited Queries"
+          })}}
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-11" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                    {{PricingCard.Four({
+            colorClass:"text-yellow",
+            plan:"Basic Plan",
+            price:"$45",
+            listOne:"800 GB Disk Space",
+            listTwo:"Unlimitedr Support",
+            listThree:"Unlimited Queries",
+            listFour:"Full Statistics",
+            listFive:"Free Custom Domain"
+          })}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

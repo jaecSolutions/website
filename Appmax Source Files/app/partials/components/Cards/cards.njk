@@ -1,0 +1,209 @@
+{% macro Team01(obj) %}
+    <a href="javascript:void(0)" class="card card-team-01">
+        <div class="card-image">
+            <img src="{{obj.img}}" alt="card">
+        </div>
+        <div class="card-texts">
+            <h3 class="card-title heading-dark">{{obj.title}}</h3>
+            <p class="text-dark">{{obj.text}}</p>
+        </div>
+    </a>
+{% endmacro %}
+{% macro Team02(obj) %}
+    <div class="card-team-02">
+        <div class="card-team-02--img">
+            <img src="{{obj.img}}" alt="team-img">
+        </div>
+        <div class="card-team-02__body">
+            <a href="" class="card-team-02__body--category text-bule">{{obj.category}}</a>
+            <h3 class="card-team-02__body--name">{{obj.name}}</h3>
+            <span class="heading-dark card-team-02__body--specialist">{{obj.specialist}}</span>
+            <p class="heading-dark card-team-02__body--info">{{obj.text}}</p>
+            <div class="card-team-02__body--button-group">
+                <span class="text {{obj.colorClass}}">{{obj.date}}</span>
+                <a class="btn-2 btn-primary btn-primary-hvr" href="#">Book Today</a>
+            </div>
+        </div>
+        <div class="card-team-02--tag">
+            <div class="ratting">
+                <i class="fas fa-star"></i>
+                <span>4.5</span>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro Testimonil01(obj) %}
+    <a href="javascript:void(0)" class="card-testimonial-01">
+        <div class="card-testimonial-01__img">
+            <img src="{{obj.img}}" alt="testimonial">
+        </div>
+        <div class="card-testimonial-01__content">
+            <div class="client-info">
+                <div class="client-info--detail">
+                    <h6>{{obj.name}}</h6>
+                    <small class="text-dark">{{obj.skill}}</small>
+                </div>
+                <div class="client-info--rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <p class="text-dark">{{obj.text}}</p>
+        </div>
+    </a>
+{% endmacro %}
+{% macro Testimonil02(obj) %}
+    <div class="card card-testimonil-02">
+        <div class="card-text">
+            <p class="text-dark">{{obj.text}}</p>
+        </div>
+        <div class="card-info">
+            <div class="card-info--img">
+                <img src="{{obj.img}}" alt="xlient-image">
+            </div>
+            <div class="card-info--details">
+                <h6>{{obj.name}}</h6>
+                <small class="text-dark">{{obj.skill}}</small>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro Testimonil03(obj) %}
+    <div class="card card-testimonil-03">
+        <div class="card-info">
+            <div class="card-info--img">
+                <img src="{{obj.img}}" alt="xlient-image">
+            </div>
+            <div class="card-body">
+                <h6 class="card-body--name">{{obj.name}}</h6>
+                <small class="text-dark card-body--profession">{{obj.skill}}</small>
+            </div>
+        </div>
+        <p class="heading-dark card-text">{{obj.text}}</p>
+    </div>
+{% endmacro %}
+{% macro Testimonil04(obj) %}
+    <div class="card-testimonial-04">
+        <div class="card-testimonial-04__content">
+            <p class="heading-dark text">{{obj.text}}</p>
+            <div class="card-testimonial-04__content--rataing">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        <div class="card-testimonial-04__info">
+            <div class="card-testimonial-04__info--img">
+                <img src="{{obj.img}}" alt="card-image">
+            </div>
+            <div class="card-testimonial-04__info--details">
+                <h6 class="name">{{obj.name}}</h6>
+                <span class="text-dark position">{{obj.skill}}</span>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro Testimonil05(obj) %}
+    <div class="card-testimonial-05">
+        <p class="heading-dark text">{{obj.text}}</p>
+        <div class="card-testimonial-05__body">
+            <div class="card-testimonial-05__body--info">
+                <div class="client-img">
+                    <img src="{{obj.img}}" alt="card-image">
+                </div>
+                <div class="client-info">
+                    <h6 class="name">{{obj.name}}</h6>
+                    <span class="text-dark skill">{{obj.skill}}</span>
+                </div>
+            </div>
+            <div class="card-testimonial-05__body--ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+{% macro Testimonil06(obj) %}
+    <a href="javascript:void(0)" class="crad card-testimonial-06">
+        <div class="card-testimonial-06__img">
+            <img src="{{obj.img}}" alt="testimonial">
+        </div>
+        <div class="card-testimonial-06__content">
+            <div class="client-info">
+                <div class="client-info--deatail">
+                    <h6>{{obj.name}}</h6>
+                    <small class="text-dark">{{obj.skill}}</small>
+                </div>
+                <div class="client-info--rataing">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <p class="heading-dark">{{obj.text}}</p>
+        </div>
+    </a>
+{% endmacro %}
+{% macro Feature01(obj) %}
+    <div class="card-feature-01">
+        <div class="card-feature-01--img">
+            <img src="{{obj.img}}" alt="testimonil-img" class="w-100">
+            <h6 class="subject {{obj.colorClass}}">
+                {{obj.subject}}
+            </h6>
+        </div>
+        <div class="card-feature-01__body">
+            <h6 class="card-feature-01__body--title">
+                {{obj.title | safe }}
+            </h6>
+            <div class="card-feature-01__body--ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="card-feature-01__body--button-group">
+                <h6 class="card-feature-01__body--button-group-price">${{obj.minPrice}}
+                    <del>${{obj.disPrice}}</del>
+                </h6>
+                <a href="#" class="btn btn-primary btn-primary -hvr">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro BlogCard01(obj) %}
+    <div class="blog-card-01">
+        <div class="blog-card-01--img">
+            <img src="{{obj.img}}" alt="blog-img" class="w-100">
+        </div>
+        <div class="blog-card-01__body">
+            <div class="blog-card-01__body--meta">
+                <div class="admmin">
+                    <img src="./image/blog/admin.svg" class="make-it-inline" alt="blog-image"/>
+                    <span>{{obj.meta}}</span>
+                </div>
+                <div class="date">
+                    <img src="./image/blog/clender.svg" class="make-it-inline" alt="blog-image"/>
+                    <span>{{obj.date}}</span>
+                </div>
+            </div>
+            <div class="blog-card-01__body--content">
+                <h6 class="title">{{obj.title}}</h6>
+                <p class="text-dark text">{{obj.text}}</p>
+                <a class="more-btn" href="#">Read More <img src="./image/blog/arrow.svg" class="make-it-inline" alt="icon"></a>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

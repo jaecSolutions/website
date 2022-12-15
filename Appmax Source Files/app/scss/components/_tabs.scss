@@ -1,0 +1,74 @@
+/*
+  Home 1 : Feature Tab
+------------------------------*/
+.nav-tab--feature{
+  @include media-breakpoint-up(lg){
+    margin-bottom: -50px;
+  }
+  .nav-item{
+    margin-bottom: 30px;
+    border: none;
+    background-color: transparent;
+    @include media-breakpoint-up(lg){
+      margin-bottom: 50px;
+    }
+    &.active{
+    background: $white;
+    .widget-text{
+      color: $blue-ribbon;
+      opacity: 1;
+    }
+    i{
+      opacity: 1;
+      color: $primary;
+    }
+  }
+  }
+}
+
+
+/*
+  Home 2 : Feature Tab
+------------------------------*/
+
+ .nav-tab--feature-2 {
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 51%;
+        transition: 0.4s;
+        border-bottom: 2px solid rgba($white-lilac, 0.2);
+        margin-bottom: 60px;
+        margin-left: -10px;
+
+        @include desktops {
+            margin-bottom: 115px;
+            justify-content: space-between;
+        }
+
+        .nav-link {
+            border: none;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: normal;
+            line-height: 1.66666;
+            display: inline-flex;
+            color: var(--color-texts);
+            padding: 18px 0;
+            transition: 0.4s;
+            margin-right: 10px;
+            border-bottom: 2px solid transparent;
+            justify-content: space-around;
+
+            &.active {
+                background-color: transparent;
+                color: $golden-tainoi;
+                border-bottom: 2px solid $golden-tainoi;
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+        }
+    }

@@ -1,0 +1,53 @@
+{% macro render(args) %}
+    {% import "components/Cards/cards.njk" as Card %}
+
+    {% set TestimonilData =[
+        {
+        id:1,
+        img:"./image/home-2/testimonial-1.png",
+        name:"Mila McSabbu",
+        skill:"Digital Marketer",
+        text:"Leading an organization is incredibly rewarding and equally humbling. Confidence and humility. Every success is built onIt requires healthy."
+        },
+        {
+        id:2,
+        img:"./image/home-2/testimonial-2.png",
+        name:"Jenny Wilson",
+        skill:"Graphic Designer",
+        text:"Leading an organization is incredibly rewarding and equally humbling. Confidence and humility. Every success is built onIt requires healthy."
+        },
+        {
+        id:3,
+        img:"./image/home-2/testimonial-3.png",
+        name:"Robert Fox",
+        skill:"Founder, Oppora",
+        text:"Leading an organization is incredibly rewarding and equally humbling. Confidence and humility. Every success is built onIt requires healthy."
+        }
+
+
+]%}
+    <div class="testimonial-section-02">
+        <div class="container">
+            <div class="section-title testimonial-section-02__title text-center">
+                <h6 class="subtitle text-primary">Testimonial</h6>
+                <h2 class="title">We have heard great <br class="d-none d-xs-block"> user experience</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-11 col-md-9 col-xs-11 col-lg-12">
+                    <div class="row justify-content-center mobile-slider three-row-mobile-slider">
+                        {%for item in TestimonilData %}
+                            <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                                {{Card.Testimonil01({
+                                img:item.img,
+                                name:item.name,
+                                skill:item.skill,
+                                text:item.text
+                            })}}
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endmacro %}

@@ -1,0 +1,56 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+
+    {% set featureData = [
+    {
+        id:1,
+        title:"Innovative Soluation",
+        icon:"./image/home-1/feature-icon-01.svg",
+        text:"Fully layered dolor sit amet, consectetur  adipisicing elit. Facere, nobis, id expedita  dolores officiis laboriosam."
+    },
+    {
+        id:2,
+        title:"Clear Navigation",
+        icon:"./image/home-1/feature-icon-02.svg",
+        text:"Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam."
+    },
+    {
+        id:3,
+        title:"Over 800 Clients",
+        icon:"./image/home-1/feature-icon-03.svg",
+        text:"Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, id expedita dolores officiis laboriosam."
+    }
+
+] %}
+    <div class="feature-section-01">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-7 col-lg-7 col-md-9 col-xs-11 text-center">
+                    <div class="section-title">
+                        <h2 class="title">A simple, proven way to boost your team performance.</h2>
+                        <p class="text-dark">Fully layered dolor sit amet, consectetur Facere, nobis, id <br class='d-none d-lg-block'/> expedita dolores officiis laboriosam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row justify-content-center justify-content-lg-start feature-widgets-row-02">
+                        {% for item in featureData %}
+                            {# {% set duration =   %} #}
+                            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-8" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                                {{Widget.column({
+                                    modifier:"widget-feature-01 icon-sizeY-68 text-center text-lg-start",
+                                    fontImg:true,
+                                    iconImage:item.icon,
+                                    title:item.title,
+                                    text:item.text,
+                                    mode:"dark"
+                                })}}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

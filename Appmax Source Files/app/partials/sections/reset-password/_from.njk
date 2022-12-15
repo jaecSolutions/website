@@ -1,0 +1,33 @@
+{% macro render(args) %}
+    <div class="reset-section-01">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-10 col-xs-10">
+                    <div class="reset-section-01__logo text-center">
+                        <a href="index.html"><img src="./image/logo/logo-dark.png" alt="logo"></a>
+                    </div>
+                    <div class="reset-form-01 block-title">
+                        <h3 class="title reset-form-01__title text-center">Reset password</h3>
+                        <form action="#" class="from">
+                            <div class="from__input-group">
+                                <label for="username" class="from__input-group--label text-dark"> Email address*</label>
+                                <input class="from__input-group--input" type="text" placeholder="Enter email address"
+                                name="username" id="username" autocomplete="off"/>
+                            </div>
+                            <div class="from__button-group">
+                                <div class="from__button-group--one">
+                                    <a class="btn btn-secondary btn-secondary-hvr" href="#">Send Reset Link</a>
+                                </div>
+                                <div class="from__button-group--two">
+                                    <a class="account-btn text-dark" href="#">Rememered the password?</a>
+                                    <a class="createanaccout-btn" href="#">Sign in now</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}

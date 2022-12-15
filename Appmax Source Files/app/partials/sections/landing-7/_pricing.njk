@@ -1,0 +1,67 @@
+{% macro render(args) %}
+  {% import "components/Cards/pricings.njk" as PricingCard %}
+  <div class="pricing-section-04">
+    <div class="pricing-section-04__shape">
+      <img src="./image/home-7/content-shape-2.png" alt="" class="w-100">
+    </div>
+    <div class="pricing-section-04__circle-1 particle"></div>
+    <div class="pricing-section-04__circle-2 particle"></div>
+    <div class="pricing-section-04__circle-3 particle"></div>
+    <div class="pricing-section-04__circle-4 particle"></div>
+    <div class="pricing-section-04__circle-5 particle"></div>
+    <div class="pricing-section-04__circle-1 particle"></div>
+    <div class="pricing-section-04__circle-2 particle"></div>
+    <div class="pricing-section-04__circle-3 particle"></div>
+    <div class="pricing-section-04__circle-4 particle"></div>
+    <div class="pricing-section-04__circle-5 particle"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-title pricing-section-04__title">
+            <h6 class="subtitle text-secondary mb-20">Pricing & Plans </h6>
+            <h2 class="title">We offer simple pricing <br class="d-none d-xs-block"> plan for you</h2>
+            <p class="text-dark">An enim nullam tempor sapien gravida donec enim <br class="d-none d-xs-block"> ipsum
+            porta justo integena gna at pretium </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 justify-content-center align-items-center pricing-section-04__price-card three-row-mobile-slider mobile-slider">
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-10" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          {{PricingCard.Four({
+          colorClass:"text-green",
+          plan:"Starter Plan",
+          price:"$0",
+          listOne:"10 GB Disk Space",
+          listTwo:"1 Year Support",
+          listThree:"500 Queries",
+          listFour:"Basic Statistics"
+        })}}
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-10 z-index-1" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          {{PricingCard.Four({
+            wrappperClass:"active",
+            colorClass:"text-red",
+            plan:"Premium Plan",
+            price:"$100",
+            listOne:"500 GB Disk Space",
+            listTwo:"5 Year Support",
+            listThree:"1000 Queries",
+            listFour:"Basic Statistics",
+            listFive:"Free Custom Domain"
+          })}}
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10 col-10" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
+          {{PricingCard.Four({
+            colorClass:"text-yellow",
+            plan:"Basic Plan",
+            price:"$45",
+            listOne:"800 GB Disk Space",
+            listTwo:"Unlimitedr Support",
+            listThree:"Unlimited Queries",
+            listFour:"Full Statistics"
+          })}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

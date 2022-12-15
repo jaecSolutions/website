@@ -1,0 +1,84 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+
+    {% set featureData = [
+{
+    title:"Wealth Nurturing",
+    icon:"./image/service/s-icon-1.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Steady Growth",
+    icon:"./image/service/s-icon-2.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Boost SEO Ranking",
+    icon:"./image/service/s-icon-3.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"App Integration",
+    icon:"./image/service/s-icon-4.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Best Email Templates",
+    icon:"./image/service/s-icon-5.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Automated Reminders",
+    icon:"./image/service/s-icon-6.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Guarantee of Quality",
+    icon:"./image/service/s-icon-7.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Stratagy & Research",
+    icon:"./image/service/s-icon-8.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+},
+{
+    title:"Daily Reports",
+    icon:"./image/service/s-icon-9.svg",
+    text:"With lots of unique blocks you can easily create a page without coding with Appmax easily."
+}
+
+] %}
+    <div class="service-section-01 service-section-01--2">
+        <div class="service-section-01--2__shape-1">
+            <img src="./image/service/shape.svg" alt="shape" class="w-100">
+        </div>
+        <div class="service-section-01--2__shape-2">
+            <img src="./image/service/dots.svg" alt="shape" class="w-100">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h2 class="title">The most useful services <br class="d-none d-xs-block"> for your business</h2>
+                    <p class="text-dark">
+                An enim nullam tempor sapien gravida donec enim ipsum <br class="d-none d-xs-block"> porta justo integer at odio velna vitae auctor integer.
+                </p>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-sm-start feature-widgets-row">
+                {% for item in featureData %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-8" data-aos="fade-left" data-aos-duration="800">
+                        {{Widget.column({
+                                modifier:"service-section-01__card service-section-01--2__card",
+                                iconImage:item.icon,
+                                title:item.title,
+                                fontImg:true,
+                                text:item.text,
+                                mode:"dark"
+                            })}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

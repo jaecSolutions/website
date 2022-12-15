@@ -1,0 +1,11 @@
+{% extends "template.njk" %}
+{% import "sections/signin-2/_content.njk" as ContentSection %}
+{% set PAGE_INFO = {
+    color_scheme : "1"
+}
+%}
+{% block main %}
+<!-- Sign In Content Start -->
+  {{ContentSection.render()}}
+<!-- Sign In Content End -->
+{% endblock %}

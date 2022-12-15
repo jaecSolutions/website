@@ -1,0 +1,38 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+    {% set featureData = [
+    {   id:1,
+        title:"Innovative Soluation",
+        icon:"./image/home-2/feature-icon-01.svg",
+        text:"Fully layered dolor adipisicing elit <br class='d-none d-xl-block'> facere,  nobis, id expedita."
+    },
+    {   id:2,
+        title:"Clear Navigation",
+        icon:"./image/home-2/feature-icon-02.svg",
+        text:"Fully layered dolor adipisicing elit <br class='d-none d-xl-block'> facere, nobis, id expedita."
+    },
+    {   id:3,
+        title:"Over 800 Clients",
+        icon:"./image/home-2/feature-icon-03.svg",
+        text:"Fully layered dolor adipisicing elit <br class='d-none d-xl-block'> facere, nobis, id expedita."
+    }
+
+] %}
+    <div class="feature-section-02">
+        <div class="container">
+            <div class="row feature-widgets-row-02 justify-content-center">
+                {% for item in featureData %}
+                    <div class="col-xl-4 col-lg-5 col-md-5 col-sm-8 col-xs-9" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                        {{Widget.normal({
+                                modifier:"widget-feature-02 widget-column-till-md text-center text-md-start",
+                                iconImage:item.icon,
+                                title:item.title,
+                                text:item.text,
+                                mode:"dark"
+                            })}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

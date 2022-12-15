@@ -1,0 +1,31 @@
+{% extends "template.njk" %}
+{% import "components/Header/_header.njk" as Header %}
+{% import "sections/portfolio/portfolio-04/_breadcrumb.njk" as BreadcrumbSection %}
+{% import "sections/portfolio/portfolio-04/_content.njk" as ContentSection %}
+{% import "components/footer/_footer-2.njk" as FooterSection %}
+{% set PAGE_INFO = {
+    color_scheme : "1"
+  }
+%}
+{% block main %}
+  {{Header.render({
+    additional_header_class:"site-header--menu-center bg-transparent site-header--dark",
+    absolute_header:true,
+    header_double_button:true,
+    header_button:false,
+    additional_db_classes:"site-header__btns--01",
+    header_button_class_1:"btn btn-transparent btn-1",
+    header_button_text_1 :"Login",
+    header_button_class_2:"btn btn-secondary btn-secondary-hvr btn-2 rounded",
+    header_button_text_2 :"Sign Up"
+  })}}
+  <!-- Breadcrumb Section Start -->
+  {{BreadcrumbSection.render()}}
+  <!-- Breadcrumb Section End -->
+  <!-- Content Section Start -->
+  {{ContentSection.render()}}
+  <!-- Content Section End -->
+  <!-- Footer Section Start -->
+  {{FooterSection.render()}}
+  <!-- Footer Section End -->
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "template.njk" %}
+{% import "components/Header/_header.njk" as Header %}
+{% import "sections/landing-8/_hero.njk" as HeroSection %}
+{% import "sections/landing-8/_feature.njk" as FeatureSection %}
+{% import "sections/landing-8/_content-1.njk" as ContentOneSection %}
+{% import "sections/landing-8/_fact.njk" as FactSection %}
+{% import "sections/landing-8/_content-2.njk" as ContentTwoSection %}
+{% import "sections/landing-8/_brand.njk" as BrandSection %}
+{% import "sections/landing-8/_about.njk" as AboutSection %}
+{% import "sections/landing-8/_team.njk" as TeamSection %}
+{% import "sections/landing-8/_testimonial.njk" as TestimonialSection %}
+{% import "sections/landing-8/_service.njk" as ServiceSection %}
+{% import "sections/landing-8/_cta.njk" as CtaSection %}
+{% import "components/footer/_footer-2.njk" as FooterSection %}
+{% set PAGE_INFO = {
+    color_scheme : "7"
+}
+%}
+{% block main %}
+  {{Header.render({
+    additional_header_class:"site-header--menu-center site-header--menu-center-adjustment bg-transparent site-header--dark",
+    absolute_header:true,
+    header_double_button:true,
+    header_button:false,
+    additional_db_classes:"site-header__btns--08",
+    header_button_class_1:"btn btn-transparent btn-1",
+    header_button_text_1 :"Login",
+    header_button_class_2:"btn btn-primary btn-primary-hvr btn-2 rounded",
+    header_button_text_2 :"Sign Up"
+  })}}
+  <!-- Hero Section Start -->
+  {{HeroSection.render()}}
+  <!-- Hero Section End -->
+  <!-- Feature Section Start -->
+  {{FeatureSection.render()}}
+  <!-- Feature Section End -->
+  <!-- About Section Start -->
+  {{AboutSection.render()}}
+  <!-- About Section End -->
+  <!-- Content Section Start -->
+  {{ContentOneSection.render()}}
+  <!-- Content Section End -->
+  <!-- Service Section Start -->
+  {{ServiceSection.render()}}
+  <!-- Service Section End -->
+  <!-- Brand Section Start -->
+  {{BrandSection.render()}}
+  <!-- Brand Section End -->
+  <!-- Fact Section Satart -->
+  {{FactSection.render()}}
+  <!-- Fact Section End -->
+  <!-- Content Section Start -->
+  {{ContentTwoSection.render()}}
+  <!-- Content Section End -->
+  <!-- Team Section Start -->
+  {{TeamSection.render()}}
+  <!-- Team Section End -->
+  <!-- Testimonial Section Start -->
+  {{TestimonialSection.render()}}
+  <!-- Testimonial Section End -->
+  <!-- Cta Section Start -->
+  {{CtaSection.render()}}
+  <!-- Cta Section End -->
+  <!-- Footer Section Start -->
+  {{FooterSection.render()}}
+  <!-- Footer Section End -->
+{% endblock %}

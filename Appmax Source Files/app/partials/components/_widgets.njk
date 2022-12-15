@@ -1,0 +1,77 @@
+{% macro counter(obj) %}
+    <div class="widget widget--counter {{obj.class}}">
+        <h3 class="text-green-2 widget--counter__title {{obj.color}}">
+            <span class="counter">{{obj.counter}}</span>{{obj.counterExt}}</h3>
+        <p class="widget--counter__text">{{obj.text}}</p>
+    </div>
+{% endmacro %}
+{% macro counterIcon(obj) %}
+    <div class="widget widget--counter-02 {{obj.class}}">
+        <div class="widget--counter-icon">
+            <img src="{{obj.icon}}" alt="icon">
+        </div>
+        <div class="widget--counter-content">
+            <h3 class="widget--counter-02__title">
+                <span class="counter">{{obj.counter}}</span>{{obj.counterExt}}</h3>
+            <p class="widget--counter-02__text">{{obj.text}}</p>
+        </div>
+    </div>
+{% endmacro %}
+{% macro column(obj) %}
+    <div class="widget widget-column {{obj.class}}">
+        <div class="widget-icon">
+            <img src="{{obj.icon}}" alt="widget"/>
+        </div>
+        <div class="widget-text">
+            <h3 class="widget-title heading-{{obj.mode}}">{{obj.title | safe}}</h3>
+            <p class="text-{{obj.mode}}">{{obj.text | safe}}</p>
+        </div>
+    </div>
+{% endmacro %}
+ 
+{% macro icon(obj) %}
+    <div class="widget widget-column-till-md {{obj.class}}">
+        <div class="widget-icon">
+            <img src="{{obj.icon}}" alt="widget"/>
+        </div>
+        <div class="widget-text">
+            <h3 class="widget-title heading-{{obj.mode}}">{{obj.title | safe}}</h3>
+            <p class="text-{{obj.mode}}">{{obj.text | safe}}</p>
+        </div>
+    </div>
+{% endmacro %}
+ 
+{% macro normal(obj) %}
+    <div class="widget widget-column-till-md {{obj.class}}">
+        <div class="widget-tag">
+            <span>{{obj.tag}}</span>
+        </div>
+        <div class="widget-text">
+            <h3 class="widget-title heading-{{obj.mode}}">{{obj.title | safe}}</h3>
+            <p class="text-{{obj.mode}}">{{obj.text | safe}}</p>
+        </div>
+    </div>
+{% endmacro %}
+ 
+{% macro card(obj) %}
+    <div class="widget widget-card widget-card-center {{obj.class}}">
+        <div class="widget-icon">
+            <img src="{{obj.icon}}" alt="widget" class="make-it-inline"/>
+        </div>
+        <div class="widget-text">
+            <h3 class="widget-title heading-{{obj.mode}}">{{obj.title | safe}}</h3>
+            <p class="text-{{obj.mode}}">{{obj.text | safe}}</p>
+        </div>
+    </div>
+{% endmacro %}
+{% macro cardRow(obj) %}
+    <div class="widget widget-card widget-card-row {{obj.class}}">
+        <div class="widget-icon">
+            <img src="{{obj.icon}}" alt="widget" class="make-it-inline"/>
+        </div>
+        <div class="widget-text">
+            <h3 class="widget-title heading-{{obj.mode}}">{{obj.title | safe}}</h3>
+            <p class="text-{{obj.mode}}">{{obj.text | safe}}</p>
+        </div>
+    </div>
+{% endmacro %}

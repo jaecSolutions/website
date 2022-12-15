@@ -1,0 +1,56 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+    {% set featureData = [
+        {   id:1,
+            title: "Advanced Reporting",
+            iconImage: "./image/home-7/c-icon-1.svg",
+            text: "With lots of unique blocks you can easily create a page without coding with Appmax"
+        }, {    id:2,
+            title: "Email Services",
+            iconImage: "./image/home-7/c-icon-2.svg",
+            text: "With lots of unique blocks you can easily create a page without coding with Appmax"
+        },
+        {   id:3,
+            title: "Sales & CRM",
+            iconImage: "./image/home-7/c-icon-3.svg",
+            text: "With lots of unique blocks you can easily create a page without coding with Appmax"
+        },
+        {   id:4,
+            title: "SEO optimization",
+            iconImage: "./image/home-7/c-icon-4.svg",
+            text: "With lots of unique blocks you can easily create a page without coding with Appmax"
+        }
+
+    ] %}
+    <div class="about-section-06">
+        <div class="about-section-06__shape" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+            <img src="./image/home-9/section-shape-2.svg" alt="shape" class="w-100">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-xs-10 col-sm-11" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                    <div class="block-title about-section-06__content mb-mobile-lg">
+                        <h6 class="subtitle text-bule mb-20">About appmax </h6>
+                        <h2 class="title">Appmax is a platform that gives you many solutions quickly</h2>
+                        <p class="text-dark">An enim nullam tempor sapien gravida donec enim ipsum porta <br class="d-none d-xl-block"> justo integer at odio velna vitae auctor integer congue </p>
+                        <a class="btn btn-primary btn-primary-hvr" href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-xl-1 col-lg-6">
+                    <div class="row justify-content-center widgets-row about-section-06__card-group">
+                        {% for item in featureData %}
+                            <div class="col-xl-6 col-lg-6 col-sm-6 col-xs-6 col-11" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                                {{Widget.normal({
+                                modifier:"widget-card",
+                                iconImage:item.iconImage,
+                                title:item.title,
+                                text:item.text
+                            })}}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

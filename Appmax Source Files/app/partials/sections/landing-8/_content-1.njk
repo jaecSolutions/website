@@ -1,0 +1,55 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+    {% set featureData = [
+    {
+        title:"Quality control system",
+        iconImage:"./image/home-8/c-icon-2.svg",
+        text:"With lots of unique blocks you can easily <br class='d-lg-block d-none'> create a page without coding with Custer"
+    },
+    {
+        title:"Highly professional team",
+        iconImage:"./image/home-8/c-icon-1.svg",
+        text:"With lots of unique blocks you can easily <br class='d-lg-block d-none'> create a page without coding with Custer"
+    }
+
+] %}
+    <div class="content-section-17">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-6 offset-xl-1 col-lg-6 col-md-9 col-11 order-lg-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+                    <div class="content-section-17__image-group mb-mobile-lg">
+                        <img src="./image/home-8/content-1.png" alt="content-img" class="mw-100">
+                        <div class="content-section-17__image-group--shape-1 two-way-circle">
+                            <img src="./image/home-8/content-round-shape.svg" class="w-100 make-it-inline" alt="shape">
+                        </div>
+                        <div class="content-section-17__image-group--shape-2">
+                            <img src="./image/home-8/content-1-shape-1.svg" class="w-100" alt="shape">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-6 col-md-9 col-11">
+                    <div class="block-title content-section-17__content" data-aos="fade-up" data-aos-duration="800">
+                        <h6 class="subtitle text-secondary  mb-20">Why choose us</h6>
+                        <h2 class="title">Custer is a great place to receive care at home</h2>
+                        <p class="text-dark">Vero homero perfecto mei ut, sonet aperiam an nec.<br class="d-nome d-xs-block" >  Me vita  haeo tibi que com titure viset cut.Proin tempus. </p>
+                    </div>
+                    <div class="row content-section-17__widget">
+                        {% for item in featureData %}
+                            <div class="col-xl-12 col-lg-12 col-md-10 col-sm-6 col-xs-6 col-10 order-lg-1" data-aos="fade-up" data-aos-duration="800">
+                                {{Widget.normal({
+                                modifier:"widget-content widget-column-till-md",
+                                iconImage:item.iconImage,
+                                title:item.title,
+                                text:item.text
+                            })}}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="content-section-17__button" data-aos="fade-up" data-aos-duration="800">
+                        <a class="btn btn-primary btn-primary-hvr" href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,159 @@
+{% macro One(obj) %}
+  <div class=" card-pricing--01 {{obj.activeWrapper}}">
+    <div class="card-pricing--01__head">
+      <h3 class="card-pricing--01__plan-title">{{obj.plan}} Plan</h3>
+      <h2 class="card-pricing--01__price dynamic-value" data-active="{{obj.price.yearly}}" data-monthly="{{obj.price.monthly}}" data-yearly={{obj.price.yearly}}></h2>
+      <span class="card-pricing--01__plan-text">Per Month</span>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ul class="card-pricing--01__list list-unstyled">
+        <li>
+          <img src="./image/icons/icon-check.svg" alt="check" class="make-it-inline fill-primary icon-check">
+          {{obj.listOne}}</li>
+        <li>
+          <img src="./image/icons/icon-check.svg" alt="check" class="make-it-inline fill-primary icon-check">
+          {{obj.listTwo}}</li>
+        <li>
+          <img src="./image/icons/icon-check.svg" alt="check" class="make-it-inline fill-primary icon-check">
+          {{obj.listThree}}</li>
+        <li>
+          <img src="./image/icons/icon-check.svg" alt="check" class="make-it-inline fill-primary icon-check">
+          {{obj.listFour}}</li>
+        <li>
+          <img src="./image/icons/icon-check.svg" alt="check" class="make-it-inline fill-primary icon-check">
+          {{obj.listFive}}</li>
+      </ul>
+    </div>
+    <div class="card-pricing--01__button text-center">
+      <a href="#" class="btn btn-white-gradient {{obj.btnActive}}">Get Started</a>
+    </div>
+  </div>
+{% endmacro %}
+{% macro Two(obj) %}
+  <div class="card card-pricing--02 {{obj.active}}">
+    <div class="card-pricing--02__head">
+      <h3 class="card-pricing--02__plan-title">{{obj.plan}}</h3>
+      <img class="card-pricing--02__plan-img" src="{{obj.img}}" alt="pricing-icon">
+      <h2 class="card-pricing--02__price">{{obj.price}}
+
+      </h2>
+      <span class="card-pricing--02__plan-text text-dark">Per Month</span>
+    </div>
+    <div class="d-flex justify-content-center">
+      <ul class="card-pricing--02__list list-unstyled">
+        <li>
+          <img src="./image/home-4/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listOne}}</li>
+        <li>
+          <img src="./image/home-4/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listTwo}}</li>
+        <li>
+          <img src="./image/home-4/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listThree}}</li>
+        <li>
+          <img src="./image/home-4/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listFour}}</li>
+        <li>
+          <img src="./image/home-4/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listFive}}</li>
+      </ul>
+    </div>
+    <div class="card-pricing--02__button text-center">
+      <a href="#" class="btn border-2 btn-primary-outline btn-rounded {{obj.btnActive}}">Get Started</a>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro Three(obj) %}
+  <div class="card card-pricing--03 {{obj.activeClass}}">
+    <div class="card-pricing--03__head">
+      <h3 class="card-pricing--03__plan-title {{obj.colorClass}}">{{obj.plan}}</h3>
+      <h2 class="card-pricing--03__price">
+        <span>$</span>{{obj.price}}</h2>
+      <span class="card-pricing--03__plan-text text-dark">Per Month</span>
+    </div>
+    <div class="d-flex">
+      <ul class="card-pricing--03__list list-unstyled">
+        <li>
+          <img src="./image/home-6/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listOne}}</li>
+        <li>
+          <img src="./image/home-6/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listTwo}}</li>
+        <li>
+          <img src="./image/home-6/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listThree}}</li>
+        <li>
+          <img src="./image/home-6/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listFour}}</li>
+        <li>
+          <img src="./image/home-6/icon-check.svg" alt="check" class="make-it-inline icon-check">{{obj.listFive}}</li>
+      </ul>
+    </div>
+    <div class="card-pricing--03__button text-start">
+      <a href="#" class="btn border-2">Buy Now</a>
+    </div>
+  </div>
+{% endmacro %}
+{% macro Four(obj) %}
+  <div class="card card-pricing--04 {{obj.wrappperClass}}">
+    <div class="card-pricing--04__head">
+      <h3 class="card-pricing--04__plan-title {{obj.colorClass}}">{{obj.plan}}</h3>
+      <h2 class="card-pricing--04__price">{{obj.price}}</h2>
+      <span class="card-pricing--04__plan-text text-dark">Per Month</span>
+    </div>
+    <ul class="card-pricing--04__list list-unstyled">
+      <li>{{obj.listOne}}</li>
+      <li>{{obj.listTwo}}</li>
+      <li>{{obj.listThree}}</li>
+      <li>{{obj.listFour}}</li>
+      <li>{{obj.listFive}}</li>
+    </ul>
+    <div class="card-pricing--04__button">
+      <a href="#" class="btn border-2">Get Started</a>
+    </div>
+  </div>
+{% endmacro %}
+{% macro Five(obj) %}
+  <div class="card card-pricing--05 {{obj.activeClass}}">
+    <div class="card-pricing--05__head">
+      <h3 class="card-pricing--05__plan-title {{obj.colorClass}}">{{obj.plan}}</h3>
+      <h2 class="card-pricing--05__price">
+        <span>$</span>{{obj.price}}</h2>
+      <span class="card-pricing--05__plan-text text-dark">Per Month</span>
+    </div>
+    <div class="d-flex">
+      <ul class="card-pricing--05__list list-unstyled">
+        <li>
+          <div class="icon-check">
+            <img src="./image/home-10/icon-check.svg" alt="check" class="make-it-inline">
+          </div>
+          <span>{{obj.listOne}}</span></li>
+        <li>
+          <div class="icon-check">
+            <img src="./image/home-10/icon-check.svg" alt="check" class="make-it-inline">
+          </div>
+          <span>{{obj.listTwo}}</span></li>
+        <li>
+          <div class="icon-check">
+            <img src="./image/home-10/icon-check.svg" alt="check" class="make-it-inline">
+          </div>
+          <span>{{obj.listThree}}</span></li>
+      </ul>
+    </div>
+    <div class="card-pricing--05__button text-start">
+      <a href="#" class="btn border-2 btn-primary-outline {{obj.btnActive}}">Get Started</a>
+    </div>
+  </div>
+{% endmacro %}
+{% macro Six(obj) %}
+  <div class="card card-pricing--06">
+    <div class="card-pricing--06__head">
+      <h3 class="card-pricing--06__plan-title {{obj.colorClass}}">{{obj.plan}} Plan</h3>
+      <h2 class="card-pricing--06__price dynamic-value" data-active="{{obj.price.yearly}}" data-monthly="{{obj.price.monthly}}" data-yearly={{obj.price.yearly}}>
+        <span class="sr-only">{{obj.price.yearly}}</span></h2>
+      <span class="card-pricing--06__plan-text text-dark">Per Month</span>
+    </div>
+    <ul class="card-pricing--06__list list-unstyled">
+      <li>{{obj.listOne}}</li>
+      <li>{{obj.listTwo}}</li>
+      <li>{{obj.listThree}}</li>
+      <li>{{obj.listFour}}</li>
+      <li>{{obj.listFive}}</li>
+    </ul>
+    <div class="card-pricing--06__button text-center">
+      <a href="#" class="btn btn-rounded-secondary {{obj.btnActive}}">Get Started</a>
+    </div>
+  </div>
+{% endmacro %}

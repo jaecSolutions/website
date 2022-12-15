@@ -1,0 +1,51 @@
+{% macro render(args) %}
+    <div class="contactform-section-01">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-4 col-md-8 mb-mobile-lg">
+                    <div class="contactform-section-01__sidebar">
+                        <h4 class="title">Contact Details</h4>
+                        <div class="contactform-section-01__sidebar--body">
+                            <div class="address">
+                                <h6 class="address--title">Office Address</h6>
+                                <div class="address__box">
+                                    <div class="icon">
+                                        <img src="./image/contact/small-map-icon.svg" alt="map-icon">
+                                    </div>
+                                    <span>2118 Thornridge Cir. Syracuse, <br> California 208434</span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h6 class="info--title">Contact Info</h6>
+                                <ul class="info__box m-0 p-0">
+                                    <li class="info__box--lists">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="#">+8 (123) 985 789</a>
+                                    </li>
+                                    <li class="info__box--lists">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:metax@gamil.com"> metax@gamil.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 offset-xl-1 col-lg-8 col-md-10">
+                    <div class="contactform-section-01__from">
+                        <form class="contact-form-01">
+                            <div class="contact-form-01--inpute-group">
+                                <input class="form-control" type="text" placeholder="Enter your name*">
+                            </div>
+                            <div class="contact-form-01--inpute-group">
+                                <input class="form-control" type="text" placeholder="Enter your email address*">
+                            </div>
+                            <textarea placeholder="Write your message" cols="30" rows="10"></textarea>
+                            <input class="btn btn-secondary btn-secondary-hvr" type="button" value="Send Message">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

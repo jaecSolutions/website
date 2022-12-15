@@ -1,0 +1,68 @@
+{% macro render(args) %}
+  {% import "components/Cards/pricings.njk" as PricingCard %}
+  <div class="pricing-section-07">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="section-title pricing-section-07__title">
+            <h2 class="title">We offer simple pricing <br class="d-none d-xs-block"> plan for you</h2>
+            <div class="pricing-section-07__button">
+              <label class="mb-3 mb-lg-0 pricing-section-07__button--text text-dark">Monthly</label>
+              <div class="btn-toggle__wrapper mb-3 mb-lg-0" >
+                <input class="btn-toggle price-deck-trigger" type="checkbox" id="btn-toggle" checked data-target="#table-price-value"/>
+                <label for="btn-toggle"></label>
+              </div>
+              <label class="mb-3 mb-lg-0 pricing-section-07__button--text text-dark">Yearly</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row three-row-mobile-slider mobile-slider justify-content-center align-items-center widgets-row" data-pricing-dynamic id="table-price-value" data-value-active="yearly">
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10">
+          {{PricingCard.Six({
+          plan:"Starter Plan",
+          colorClass:"text-green",
+          price:{
+            monthly:"$15",
+            yearly:"$0"
+          },
+          listOne:"10 GB Disk Space",
+          listTwo:"1 Year Support",
+          listThree:"Basic Statistics",
+          listFour:"500 Queries"
+        })}}
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10">
+          {{PricingCard.Six({
+            btnActive:"active",
+          plan:"Premium Plan",
+          colorClass:"text-red",
+          price:{
+            monthly:"$200",
+            yearly:"$100"
+          },
+          listOne:"800 GB Disk Space",
+          listTwo:"Free Custom Domain",
+          listThree:"Unlimited Support",
+          listFour:"Full Statistics",
+          listFive:"Unlimited Queries"
+        })}}
+        </div>
+        <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10">
+          {{PricingCard.Six({
+          plan:"Basic Plan",
+          colorClass:"text-yellow",
+          price:{
+            monthly:"$85",
+            yearly:"$45"
+          },
+        listOne:"500 GB Disk Space",
+        listTwo:"5Year Support",
+        listThree:"Basic Statistics",
+        listFour:"1000 Queries"
+        })}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

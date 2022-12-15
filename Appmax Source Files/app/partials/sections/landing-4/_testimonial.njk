@@ -1,0 +1,63 @@
+{% macro render(args) %}
+    {% import "components/Cards/cards.njk" as Card %}
+
+    {% set TestimonilData =[
+    {
+    img:"./image/home-3/t-1.png",
+    name:"Jenny Wilson",
+    skill:"Graphic Designer",
+    text:"OMG! I cannot believe that I have got a brand new landing page after getting appmax. It was super easy to edit and publish."
+    },
+    {
+    img:"./image/home-3/t-2.png",
+    name:"Robert Fox",
+    skill:"Digital Marketer",
+    text:"OMG! I cannot believe that I have got a brand new landing page after getting appmax. It was super easy to edit and publish."
+    },
+    {
+    img:"./image/home-3/t-3.png",
+    name:"Mila McSabbu",
+    skill:"HR Manager",
+    text:"OMG! I cannot believe that I have got a brand new landing page after getting appmax. It was super easy to edit and publish."
+    },
+{
+    img:"./image/home-3/t-2.png",
+    name:"Robert Fox",
+    skill:"Digital Marketer",
+    text:"OMG! I cannot believe that I have got a brand new landing page after getting appmax. It was super easy to edit and publish."
+    }
+
+]%}
+    <div class="testimonil-section-04">
+        <div class="container">
+            <div class="row">
+                <div class="section-title testimonil-section-04__title">
+                    <h6 class="subtitle text-secondary mb-20">Testimonials</h6>
+                    <h2 class="title">What our happy clients say</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-11 col-md-9 col-lg-12">
+                    <div class="testimonil-section-04__slider">
+                        <div class="testimonial-slider--04 mobile-slider" >
+                            {%for item in TestimonilData %}
+                                <div class="single-slider">
+                                    {{Card.Testimonil03({
+                                                img:item.img,
+                                                name:item.name,
+                                                skill:item.skill,
+                                                text:item.text
+                                            })}}
+                                </div>
+                                {%endfor%}
+                            </div>
+                            <div class="testimonial-slider--04__control-buttons">
+                                <button class="button button--prev"><img src="./image/home-4/left.svg" class="make-it-inline" alt="icon"></button>
+                                <button class="button button--next"><img src="./image/home-4/right.svg" class="make-it-inline" alt="icon"></button>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    {% endmacro %}

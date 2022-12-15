@@ -1,0 +1,49 @@
+{% macro render(args) %}
+    {% import "components/_widget.njk" as Widget %}
+
+    {% set counterData =[
+        {
+        iconImage:"./image/home-4/fact-icon-1.svg",
+        title:"<span class='counter'>28</span>K",
+        text:"Users"
+        },
+        {
+        iconImage:"./image/home-4/fact-icon-2.svg",
+        title:"<span class='counter'>13</span>K",
+        text:"Download"
+        },
+        {
+        iconImage:"./image/home-4/fact-icon-3.svg",
+        title:"<span class='counter'>68</span>K",
+        text:"Likes"
+        },
+        {
+        iconImage:"./image/home-4/fact-icon-4.svg",
+        title:"<span class='counter'>10</span>K",
+        text:"5 Star Rating"
+        }
+
+]%}
+    <div class="counter-section-04">
+        <div class="counter-section-04__shape">
+            <img src="./image/home-4/fact-shape.svg" class="make-it-inline" alt="shape">
+        </div>
+        <div class="container">
+            <div class="row justify-content-center widgets-row-02">
+                {%for item in counterData %}
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-12">
+                        {{Widget.column({
+                            modifier:"widget-column-center widget-counter",
+                            iconImage:item.iconImage,
+                            titleClass:"heading-light",
+                            textClass:"text-light",
+                            fontImg:true,
+                            title:item.title,
+                            text:item.text
+                        })}}
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    {% endmacro %}

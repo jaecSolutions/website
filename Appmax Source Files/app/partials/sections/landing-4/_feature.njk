@@ -1,0 +1,63 @@
+{% macro render(options) %}
+    {% import "components/_widget.njk" as Widget %}
+    {% set featureData = [
+    {
+        title:"Innovative Soluation ",
+        iconWrapperClass:"bg-secondary",
+        iconImage:"./image/home-4/f-widget-icon-1.svg",
+        text:"Fully layered dolor sit amet, consectetur adipisicing elit. Facere dolores laboriosam."
+    },
+    {
+        title:"Clear Navigation",
+        iconWrapperClass:"bg-primary",
+        iconImage:"./image/home-4/f-widget-icon-2.svg",
+text:"Fully layered dolor sit amet, consectetur adipisicing elit. Facere dolores laboriosam."
+    },
+    {
+        title:"Over 800 Clients",
+        iconWrapperClass:"bg-yellow",
+        iconImage:"./image/home-4/f-widget-icon-3.svg",
+text:"Fully layered dolor sit amet, consectetur adipisicing elit. Facere dolores laboriosam."
+    }
+
+] %}
+    <div class="feature-section-04">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-11 col-xs-10 col-sm-11 col-md-8 col-lg-12">
+                    <div class="row align-items-start justify-content-sm-start">
+                        <div class="col-xxl-6 offset-xxl-2 col-xxl-6 offset-xxl-1 col-lg-6 col-md-9 col-sm-10 col-xs-11 order-lg-2">
+                            <div class="feature-section-04__image-group text-lg-center mb-mobile-lg">
+                                <img src="./image/home-4/feature.png" alt="content-img">
+                                <div class="feature-section-04__image-group--shape shape-x-1">
+                                    <img src="./image/home-4/feature-shape-1.svg" alt="shape" class="make-it-inline">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-12 col-xs-11">
+                            <div class="block-title widget-content" data-aos="fade-up" data-aos-duration="800">
+                                <h6 class="subtitle text-secondary mb-20">Why choose us</h6>
+                                <h2 class="title">We offer great <br class="d-nome d-xs-block" > features in Custer</h2>
+                                <p class="text-dark">Vero homero perfecto mei ut, sonet aperiam an nec. Me vita  haeo tibi que com titure viset cut.Proin tempus. </p>
+                            </div>
+                            <div class="row feature-section-04__widget widgets-row-02">
+                                {% for item in featureData %}
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 col-xs-12 order-lg-1" data-aos="fade-up" data-aos-duration="800">
+                                        {{Widget.normal({
+                                        modifier:"widget-content widget-column-till-md",
+                                        iconWrapperClass:item.iconWrapperClass,
+                                        iconImage:item.iconImage,
+                                        title:item.title,
+                                        text:item.text
+                                    })}}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT-02 SECTION -->
+{% endmacro %}

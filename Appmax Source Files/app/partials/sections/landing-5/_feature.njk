@@ -1,0 +1,74 @@
+{% macro render(args) %}
+    {% import "components/Cards/cards.njk" as Card %}
+
+    {% set cardData =[
+    {
+    id:1,
+    img:"./image/home-5/testimonial-1.png",
+    title:"There are three main <br> branches of science other <br> natural.",
+    minPrice:"19.99",
+    disPrice:"90.00",
+    color:"group-green",
+    subject:"Science"
+    },
+    {
+    id:2,
+    img:"./image/home-5/testimonial-2.png",
+    title:"Biology study of life and <br> living organisms,biotic <br> Factors.",
+    minPrice:"14.99",
+    disPrice:"90.00",
+    color:"group-violet",
+    subject:"Biology"
+    },
+    {
+    id:3,
+    img:"./image/home-5/testimonial-3.png",
+    title:"Math is the preferred  <br> term in the United States <br> and Canada.",
+    minPrice:"12.99",
+    disPrice:"90.00",
+    color:"group-red",
+    subject:"Mathametics"
+    },
+    {
+    id:4,
+    img:"./image/home-5/testimonial-4.png",
+    title:"English is a West <br> Germanic language first <br>spoken in early.",
+    minPrice:"29.99",
+    disPrice:"90.00",
+    color:"group-yellow",
+    subject:"English"
+    }
+
+
+]%}
+    <div class="feature-section-05">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-md-9 col-sm-10 col-xs-11">
+                    <div class="section-title content-title text-center">
+                        <h6 class="subtitle text-secondary">Featured coures</h6>
+                        <h2 class="title">Explore Appmax’s latest featured courses</h2>
+                        <p class="text-dark">
+                    An enim nullam tempor sapien gravida donec enim ipsum <br class="d-none d-xs-block"> porta justo integer at odio velna vitae auctor integer.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row four-row-mobile-slider mobile-slider">
+                {% for item in cardData %}
+                    <div class="col-xl-3 col-lg-4" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                        {{Card.Feature01({
+                    img:item.img,
+                    colorClass:item.color,
+                    title:item.title,
+                    text:item.text,
+                    disPrice:item.disPrice,
+                    minPrice:item.minPrice,
+                    subject:item.subject
+                })}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

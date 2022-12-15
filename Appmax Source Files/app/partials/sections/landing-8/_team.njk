@@ -1,0 +1,80 @@
+{% macro render(args) %}
+    {% import "components/Cards/cards.njk" as Card %}
+    {% set cardData =[
+        {
+        id:1,
+        img:"./image/home-8/team-1.png",
+        date:"Available Today",
+        category:"Radiology",
+        name:"Dr. Esther Howard",
+        colorClass:"text-tertiary",
+        specialist:"M.B.B.S, Ph.D",
+        text:"Attending physician, Cardiology editor."
+        },
+        {
+        id:2,
+        img:"./image/home-8/team-2.png",
+        date:"Not Available",
+        category:"Neurology",
+        colorClass:"text-gray",
+        name:"Dr. Leslie Alexander",
+        specialist:"M.B.B.S, Ph.D",
+        text:"Attending physician, Cardiology editor."
+        },
+        {
+        id:3,
+        img:"./image/home-8/team-3.png",
+        date:"Available Today",
+        category:"Cardiology",
+        colorClass:"text-tertiary",
+        name:"Dr. Kathryn Murphy",
+        specialist:"M.B.B.S, Ph.D",
+        text:"Attending physician, Cardiology editor."
+        },
+        {
+        id:4,
+        img:"./image/home-8/team-4.png",
+        date:"Available Today",
+        category:"Radiology",
+        colorClass:"text-tertiary",
+        name:"Dr. Jacob Jones",
+        specialist:"M.B.B.S, Ph.D",
+        text:"Attending physician, Cardiology editor."
+        }
+
+
+]%}
+    <div class="team-section-02">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-7">
+                    <div class="block-title team-section-02__content">
+                        <h6 class="subtitle text-secondary  mb-20">Meet our professionals</h6>
+                        <h2 class="title">Meet the top & <br class="d-none d-xs-block"> best rated doctors</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-5 ">
+                    <div class="team-section-02__button">
+                        <a href="#">View all doctors 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="four-row-mobile-slider team-section-02__card  mobile-slider row">
+                {% for item in cardData%}
+                    <div class="col-lg-3" data-aos="fade-up" data-aos-delay="{{ 200 * item.id }}" data-aos-duration="1000">
+                        {{Card.Team02({
+                        img:item.img,
+                        category:item.category,
+                        date:item.date,
+                        colorClass:item.colorClass,
+                        name:item.name,
+                        specialist:item.specialist,
+                        text:item.text
+                    })}}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
